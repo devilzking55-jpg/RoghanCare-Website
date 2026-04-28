@@ -71,8 +71,8 @@
             --s8-card-bg: #f4f8fc;
             --icon-bg: #eff6ff;
 
-            /* Graphic Colors */
             --s6-dot-color: #93c5fd;
+            --primary-fade: #3785ee1a;
         }
 
         /* --- CSS RESET --- */
@@ -233,6 +233,14 @@
             color: var(--primary);
         }
 
+        /* Active Nav Link Marker — highlights the current page link */
+        .nav-links a.active {
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 6px;
+            text-decoration-thickness: 2px;
+        }
+
         .nav-btn {
             background: var(--primary);
             color: white;
@@ -262,16 +270,18 @@
         .hero {
             position: relative;
             z-index: 2;
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
             align-items: center;
-            justify-content: space-between;
-            padding: 10px 60px 60px 90px;
+            min-height: calc(100vh - 100px);
+            padding-left: max(20px, calc((100vw - 1400px) / 2 + 20px));
             gap: 40px;
-            min-height: calc(100vh - 80px);
         }
 
         .hero-left {
-            max-width: 520px;
+            max-width: 600px;
+            padding-bottom: 60px;
+            padding-top: 40px;
         }
 
         .badge {
@@ -290,6 +300,7 @@
         .badge-icon {
             width: 16px;
             height: 16px;
+            fill: none;
         }
 
         .hero h1 {
@@ -332,7 +343,8 @@
 
         .icon-box {
             background: #b6d2ff6f;
-            padding: 16px;
+            width: 62px;
+            height: 62px;
             border-radius: 14px;
             margin-bottom: 15px;
             transition: 0.3s ease;
@@ -343,13 +355,14 @@
 
         .icon-box:hover {
             transform: scale(1.1) rotate(5deg);
-            box-shadow: 0 8px 16px rgba(26, 36, 176, 0.2);
+            box-shadow: 0 8px 16px rgba(55, 134, 238, 0.252);
+            border: 2px solid #3785ee;
         }
 
         .icon-box svg {
             color: var(--primary);
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
         }
 
         .feature-item strong {
@@ -384,13 +397,13 @@
 
         /* --- SECTION 2: INSTANT ACTION --- */
         .section-two {
-            padding: 80px 0;
+            padding: 100px 0;
         }
 
         .s2-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 80px;
+            gap: 60px;
             align-items: center;
         }
 
@@ -1669,9 +1682,7 @@
 
         /* --- FOOTER & CTA BANNER --- */
         .footer-banner-wrapper {
-            padding: 60px 40px 40px 40px;
-            max-width: 1400px;
-            margin: 0 auto;
+            padding: 60px 0 40px 0;
         }
 
         .footer-banner {
@@ -2023,6 +2034,10 @@
                 gap: 40px;
             }
 
+            .hero-left {
+                margin-top: 0px;
+            }
+
             .sec-title {
                 font-size: 40px;
             }
@@ -2044,22 +2059,22 @@
         @media (max-width: 1100px) {
             .s6-content {
                 grid-template-columns: 1fr;
-                text-align: center;
-                gap: 20px;
+                text-align: left;
+                gap: 40px;
             }
 
             .s6-col.left-col,
             .s6-col.right-col {
                 padding: 0;
-                gap: 40px;
+                gap: 30px;
             }
 
             .s6-col.left-col {
-                padding-bottom: 20px;
+                padding-bottom: 0px;
             }
 
             .s6-feature-header {
-                justify-content: center;
+                justify-content: flex-start;
             }
 
             .s6-col.left-col {
@@ -2073,7 +2088,13 @@
 
             .s6-image-container {
                 order: 3;
-                margin-bottom: -150px;
+                margin-bottom: -50px;
+                margin-top: 20px;
+            }
+
+            .s6-image-container img {
+                width: 100%;
+                max-width: 400px;
             }
 
             .section-six {
@@ -2136,9 +2157,11 @@
             }
 
             .hero {
-                flex-direction: column;
+                grid-template-columns: 1fr;
+                padding-left: 20px;
+                padding-right: 20px;
                 text-align: center;
-                padding: 40px 20px;
+                min-height: auto;
             }
 
             .hero h1 {
@@ -2157,6 +2180,10 @@
 
             .hero-right img {
                 width: 100%;
+            }
+
+            .hero-left {
+                margin-top: 0px;
             }
 
             .s2-grid {
@@ -2251,6 +2278,10 @@
                 gap: 12px;
             }
 
+            .hero-left {
+                margin-top: 0px;
+            }
+
             .hero-buttons a {
                 width: 100%;
             }
@@ -2294,12 +2325,12 @@
             }
 
             .s6-wrapper {
-                padding: 50px 20px 15px 20px;
+                padding: 50px 20px 0px 20px;
                 border-radius: 24px;
             }
 
             .s6-image-container {
-                margin-bottom: -150px;
+                margin-bottom: -20px;
             }
 
             .impact-grid {
@@ -2377,6 +2408,79 @@
                 text-align: center;
             }
         }
+
+        /* --- MODAL STYLES --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay:not(.hidden) {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            max-width: 400px;
+            width: 100%;
+            margin: 0 16px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay:not(.hidden) .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-icon-container {
+            margin: 0 auto 16px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 48px;
+            width: 48px;
+            border-radius: 50%;
+            background-color: #dcfce7;
+        }
+
+        .modal-icon-container svg {
+            height: 24px;
+            width: 24px;
+            color: #16a34a;
+        }
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .modal-text {
+            color: #4b5563;
+            margin-bottom: 24px;
+            font-size: 15px;
+        }
     </style>
 </head>
 
@@ -2384,6 +2488,10 @@
 
     <div class="background">
 
+        <!-- =========================================
+             MAIN NAVIGATION HEADER
+             Contains Logo, Desktop Links, and Mobile Menu Toggle
+             ========================================= -->
         <header class="navbar">
             <div class="logo gsap-fade-in">
                 <img src="assets/logo.png" alt="RoghanCare Logo">
@@ -2395,16 +2503,20 @@
             </div>
 
             <div class="nav-links gsap-fade-in" id="nav-links">
-                <a href="/">Home</a>
-                <a href="/solutions">Solutions</a>
-                <a href="/about-us">About</a>
-                <a href="/frequently-asked-questions">FAQs</a>
-                <a href="/contact-us">Contact</a>
+                <a href="/" class="active">Home</a>
+                <a href="/solution.html">Solutions</a>
+                <a href="/feature.html">Features</a>
+                <a href="/faq.html">FAQs</a>
+                <a href="/contact-us.html">Contact</a>
             </div>
 
             <a href="/contact-us" class="nav-btn desktop-only gsap-fade-in">Book Demo →</a>
         </header>
 
+        <!-- =========================================
+             HERO SECTION (Section 1)
+             Introduction, Main Headline, and Quick Features
+             ========================================= -->
         <section class="hero">
             <div class="hero-left">
                 <div class="badge gsap-slide-up"><i data-feather="cpu" class="badge-icon"></i>Advanced Digital Alert
@@ -2455,6 +2567,10 @@
 
     <div class="section-divider"></div>
 
+    <!-- =========================================
+         SOLUTIONS / PLATFORMS (Section 2)
+         Showcases multi-platform support and devices
+         ========================================= -->
     <section class="section-two" id="solutions">
         <div class="container s2-grid">
 
@@ -2491,6 +2607,10 @@
         </div>
     </section>
 
+    <!-- =========================================
+         TRUST SCROLL BAR
+         Infinitely scrolling horizontal banner with key features
+         ========================================= -->
     <div class="trust-bar">
         <div class="trust-track">
             <span><i data-feather="bell"></i> Instant Alert</span>
@@ -2504,6 +2624,10 @@
         </div>
     </div>
 
+    <!-- =========================================
+         HOW IT WORKS WORKFLOW (Section 3)
+         Step-by-step breakdown of the alert process
+         ========================================= -->
     <section class="section-three">
         <div class="container">
             <h2 class="section-title gsap-slide-up">How Our System Works</h2>
@@ -2549,6 +2673,10 @@
         </div>
     </section>
 
+    <!-- =========================================
+         SECURITY & COMPLIANCE (Section 4 / About Us)
+         Highlights HIPAA compliance, encryption, and logs
+         ========================================= -->
     <section class="section-four" id="about-us">
         <div class="container">
             <div class="security-box">
@@ -2598,6 +2726,10 @@
         </div>
     </section>
 
+    <!-- =========================================
+         MIDDLE CALL-TO-ACTION (Section 5)
+         Secondary CTA to encourage engagement early on
+         ========================================= -->
     <section class="section-five">
         <div class="cta-container gsap-slide-up">
             <h2 class="cta-title">Ready to architect the future of<br>care?</h2>
@@ -2624,6 +2756,10 @@
         </div>
     </div>
 
+    <!-- =========================================
+         POWERFUL FEATURES (Section 6)
+         Deep dive into specific UI highlights and capabilities
+         ========================================= -->
     <section class="section-six">
         <div class="container">
             <div class="s6-wrapper">
@@ -2695,6 +2831,10 @@
         </div>
     </section>
 
+    <!-- =========================================
+         MEASURABLE IMPACT (Section 7)
+         Grid of statistics and success metrics
+         ========================================= -->
     <section class="section-impact">
         <div class="container impact-grid-wrapper">
 
@@ -2742,6 +2882,10 @@
         </div>
     </section>
 
+    <!-- =========================================
+         EMERGENCY CODES (Section 8)
+         List of supported medical standard color codes
+         ========================================= -->
     <section class="section-codes">
         <div class="container">
             <div class="codes-wrapper">
@@ -2828,7 +2972,7 @@
                     <div class="code-card">
                         <img src="assets/code-silver.png" alt="Code Silver Icon" class="code-icon">
                         <div class="code-text">
-                            <h4 class="color-silver">CODE RED</h4>
+                            <h4 class="color-silver">CODE SILVER</h4>
                             <p>IT Systems Failure & Cyber Incidents</p>
                         </div>
                     </div>
@@ -2854,6 +2998,10 @@
         </div>
     </section>
 
+    <!-- =========================================
+         CONTACT US (Section 9)
+         Live contact form, direct email integration, and support details
+         ========================================= -->
     <section class="section-contact" id="contact-us">
         <div class="s7-patterns-layer">
             <div class="dot-circle dot-left"></div>
@@ -2915,32 +3063,47 @@
                     <h3>Send us a Message</h3>
                     <p>Fill out the form and we'll get back to you within 24 hours.</p>
 
-                    <form action="#" method="POST">
+                    <form id="contactForm" action="https://formsubmit.co/sli.navelha.g.e.pto.6g@gmail.com"
+                        method="POST">
+                        <!--Honeypot-->
+                        <input type="text" name="_honey" style="display: none;">
+                        <!-- 🔒 FormSubmit hidden settings -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_subject" id="emailSubject" value="New Inquiry from RoghanCare">
+                        <input type="hidden" name="_template" value="box">
+                        <input type="hidden" name="_next" value="#contact-us">
+                        <!-- <input type="hidden" name="_cc" value="sli.navelha.g.e.pto.6g@gmail.com"> -->
+                        <input type="hidden" name="_replyto" value="email">
+                        <input type="hidden" name="_autoresponse"
+                            value="Thank you for your inquiry! We will contact you shortly.">
+
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Full Name <span class="req">*</span></label>
-                                <input type="text" placeholder="Enter your full name" required>
+                                <label for="name">Full Name <span class="req">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
                             </div>
                             <div class="form-group">
-                                <label>Email <span class="req">*</span></label>
-                                <input type="email" placeholder="Enter your Email" required>
+                                <label for="email">Email <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
                             </div>
                         </div>
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Phone Number <span class="req">*</span></label>
-                                <input type="tel" placeholder="Enter your Phone Number" required>
+                                <label for="phone">Phone Number <span class="req">*</span></label>
+                                <input type="tel" id="phone" name="phone" placeholder="Enter your Phone Number"
+                                    pattern="[0-9+ ]*" title="Only digits (0-9), + and spaces are allowed" required>
                             </div>
                             <div class="form-group">
-                                <label>Organization / Hospital <span class="req">*</span></label>
-                                <input type="text" placeholder="Enter your Organization / Hospital" required>
+                                <label for="organization">Organization / Hospital <span class="req">*</span></label>
+                                <input type="text" id="organization" name="organization"
+                                    placeholder="Enter your Organization / Hospital" required>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label>What can we help you with? <span class="req">*</span></label>
-                            <select required>
+                            <label for="service">What can we help you with? <span class="req">*</span></label>
+                            <select id="service" name="service" required>
                                 <option value="" disabled selected>Select an option</option>
                                 <option value="demo">Book a Demo</option>
                                 <option value="pricing">Pricing Information</option>
@@ -2950,8 +3113,9 @@
                         </div>
 
                         <div class="form-group">
-                            <label>Message</label>
-                            <textarea placeholder="Tell us more about your requirements..."></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message"
+                                placeholder="Tell us more about your requirements..."></textarea>
                         </div>
 
                         <button type="submit" class="btn-primary" style="width: 100%; margin-top: 10px;">Send
@@ -2959,10 +3123,30 @@
                     </form>
                 </div>
 
+                <!-- Success Modal -->
+                <div id="successModal" class="modal-overlay hidden">
+                    <div class="modal-content">
+                        <div class="modal-icon-container">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                        </div>
+                        <h3 class="modal-title">Request Submitted!</h3>
+                        <p class="modal-text">Thank you for your request. We'll contact you shortly.</p>
+                        <button type="button" onclick="closeSuccessModal()" class="btn-secondary"
+                            style="width: 100%;">Close</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
+    <!-- =========================================
+         FAQ & TESTIMONIALS (Section 10)
+         Client trust markers and collapsible frequently asked questions
+         ========================================= -->
     <section class="section-eight" id="frequently-asked-questions">
         <div class="container">
             <div class="s8-grid">
@@ -3077,6 +3261,10 @@
         </div>
     </div>
 
+    <!-- =========================================
+         MAIN FOOTER
+         Brand footer, quick links, social media, and copyright 
+         ========================================= -->
     <footer class="footer-main">
         <div class="container">
             <div class="footer-grid">
@@ -3255,6 +3443,55 @@
                 }
             });
         });
+
+        // 7. Form Submission Logic with FormSubmit
+        const contactForm = document.getElementById('contactForm');
+        const serviceSelect = document.getElementById('service');
+        const emailSubject = document.getElementById('emailSubject');
+
+        if (contactForm && serviceSelect && emailSubject) {
+            serviceSelect.addEventListener('change', function () {
+                emailSubject.value = `New Inquiry - ${this.options[this.selectedIndex].text}`;
+            });
+
+            contactForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                // Change button text to indicate loading
+                const submitBtn = contactForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+
+                fetch(this.action, {
+                    method: 'POST',
+                    body: new FormData(this),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            document.getElementById('successModal').classList.remove('hidden');
+                            contactForm.reset();
+                        } else {
+                            alert("There was a problem submitting your form. Please try again.");
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert("There was a problem submitting your form. Please check your connection.");
+                    })
+                    .finally(() => {
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    });
+            });
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+        }
     </script>
 
 </body>
