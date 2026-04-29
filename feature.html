@@ -1,0 +1,3349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="RoghanCare Features - Advanced features for critical communication. Discover the powerful tools that make RoghanCare the most reliable emergency alert system.">
+    <meta name="keywords"
+        content="RoghanCare Features, Healthcare Alert System, Medical Automation, Critical Response Software, Emergency Alerts">
+    <meta name="author" content="RoghanCare">
+
+    <title>Features | RoghanCare Critical Response</title>
+
+    <link rel="icon" type="image/png" href="assets/logo.png">
+
+    <meta property="og:title" content="Features | RoghanCare Critical Response">
+    <meta property="og:description"
+        content="Advanced features for critical communication. Discover the powerful tools that make RoghanCare the most reliable emergency alert system.">
+    <meta property="og:image" content="assets/rogancare-website.png">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalOrganization",
+      "name": "RoghanCare",
+      "url": "https://roghancare.com",
+      "logo": "https://roghancare.com/assets/logo.png",
+      "description": "Digital healthcare operations and medical emergency alert platform.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Dubai",
+        "addressCountry": "AE"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+971-000-0000",
+        "contactType": "customer support",
+        "areaServed": "AE",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+
+    <style>
+        /* --- CSS VARIABLES (Site-wide consistency) --- */
+        :root {
+            /* Brand Colors */
+            --primary: #3785ee;
+            --primary-light: #e0ecff;
+            --primary-dark: #1d4ed8;
+            --primary-fade: #e0ecff;
+            --hero-x: 20px;
+
+            /* Text & Border Colors */
+            --text-dark: #0f172a;
+            --text-gray: #64748b;
+            --border: #e2e8f0;
+
+            /* Background Colors */
+            --bg-page: #ffffff;
+            --card-bg: #ffffff;
+            --icon-bg: #eff6ff;
+            --wrapper-bg: #f8fafc;
+
+            /* Status & Icon Colors */
+            --color-success: #16a34a;
+            --color-error: #ef4444;
+            --color-warn: #f59e0b;
+
+            --icon-blue-bg: #e0ecff;
+            --icon-blue-text: #3785ee;
+            --icon-green-bg: #dcfce7;
+            --icon-green-text: #16a34a;
+            --icon-purple-bg: #f3e8ff;
+            --icon-purple-text: #9333ea;
+
+            --c-purple: #9333ea;
+            --c-purple-bg: #f3e8ff;
+            --c-green: #16a34a;
+            --c-green-bg: #dcfce7;
+            --c-blue: #2563eb;
+            --c-blue-bg: #dbeafe;
+            --c-teal: #0891b2;
+            --c-teal-bg: #cffafe;
+            --c-orange: #ea580c;
+            --c-orange-bg: #ffedd5;
+            --c-indigo: #4f46e5;
+            --c-indigo-bg: #e0e7ff;
+
+            --before-bg: #fef2f2;
+            --before-border: #fca5a5;
+            --before-text: #ef4444;
+            --after-bg: #f0fdf4;
+            --after-border: #86efac;
+            --after-text: #22c55e;
+
+            --icon-gray: #475569;
+            --card-red-border: #fca5a5;
+            --card-red-bg: #fef2f2;
+            --text-red: #ef4444;
+        }
+
+        /* --- CSS RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-page);
+            color: var(--text-dark);
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* --- GLOBAL COMPONENTS --- */
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondary {
+            background: #ffffff;
+            border: 1px solid #d1d5db;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-size: 16px;
+            color: var(--text-dark);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background: #f8fafc;
+            transform: translateY(-2px) scale(1.05);
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            color: var(--primary);
+            padding: 6px 14px;
+            border-radius: 999px;
+            font-size: 11px;
+            margin-bottom: 16px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 1px solid #bfdbfe;
+        }
+
+        .badge svg {
+            width: 14px;
+            height: 14px;
+            stroke-width: 2.5;
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            position: relative;
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 40px;
+            transition: 0.3s ease;
+        }
+
+        .navbar.scrolled {
+            position: fixed;
+            width: 90%;
+            left: 50%;
+            top: 20px;
+            margin-left: -45%;
+            transform: none;
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.85);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-radius: 30px;
+            padding: 15px 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            font-size: 24px;
+            color: var(--text-dark);
+        }
+
+        .logo img {
+            height: 25px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-weight: 600;
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: var(--text-dark);
+        }
+
+        .nav-links a:hover {
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+        }
+
+        .nav-links a.active {
+            color: var(--primary);
+            text-decoration: underline;
+            text-underline-offset: 6px;
+            text-decoration-thickness: 2px;
+        }
+
+        .nav-btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+
+        /* ========================================================
+           S1: FEATURES HERO
+           ======================================================== */
+        .background {
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+            border-bottom-left-radius: 60px;
+            border-bottom-right-radius: 60px;
+        }
+
+        .background::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background: radial-gradient(40% 35% at 60% 50%, rgba(59, 130, 246, 0.25), transparent), radial-gradient(35% 40% at 90% 60%, rgba(59, 130, 246, 0.30), transparent), radial-gradient(30% 35% at 10% 70%, rgba(59, 130, 246, 0.15), transparent), linear-gradient(to bottom, #ffffff 0%, transparent 40%), radial-gradient(80% 60% at 50% 100%, #f4f8fc 20%, transparent 100%);
+        }
+
+        .features-hero {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            align-items: center;
+            min-height: calc(100vh - 100px);
+            padding-left: max(40px, calc((100vw - 1400px) / 2 + 40px));
+            padding-right: max(40px, calc((100vw - 1400px) / 2 + 40px));
+            gap: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .features-hero-left {
+            padding-right: 20px;
+            padding-bottom: 60px;
+            max-width: 650px;
+        }
+
+        .features-hero h1 {
+            font-size: 60px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .features-hero h1 span {
+            color: var(--primary);
+            display: block;
+        }
+
+        .features-hero p {
+            font-size: 18px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 550px;
+        }
+
+        .features-buttons {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .features-list {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .feat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 12px;
+            max-width: 180px;
+        }
+
+        .feat-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 12px;
+            background-color: var(--icon-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.05);
+            transition: 0.3s ease;
+        }
+
+        .feat-icon:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 16px rgba(37, 133, 238, 0.25);
+            border: 2px solid var(--primary);
+        }
+
+        .feat-icon svg {
+            width: 24px;
+            height: 24px;
+            stroke-width: 2;
+        }
+
+        .feat-item strong {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .feat-item span {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .features-hero-right {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-top: 40px;
+            padding-bottom: 60px;
+            position: relative;
+        }
+
+        .features-hero-right img {
+            width: 100%;
+            max-width: 1400px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 25px 45px rgba(0, 0, 0, 0.15));
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            transform: translateX(var(--hero-x));
+            animation: floatImage 8s ease-in-out infinite;
+        }
+
+        @keyframes floatImage {
+            0% {
+                transform: translateY(0px) translateX(var(--hero-x));
+            }
+
+            50% {
+                transform: translateY(-15px) translateX(var(--hero-x));
+            }
+
+            100% {
+                transform: translateY(0px) translateX(var(--hero-x));
+            }
+        }
+
+        /* ========================================================
+           S2: GO LIVE IN 4 STEPS
+           ======================================================== */
+        .section-get-started {
+            position: relative;
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .gs-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        .gs-header h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .gs-steps-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gs-step {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            position: relative;
+            padding-right: 30px;
+        }
+
+        .gs-step:last-child {
+            padding-right: 0;
+        }
+
+        .gs-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: 90px;
+            right: 20px;
+            border-top: 2px dotted #93c5fd;
+            z-index: 0;
+        }
+
+        .gs-icon-group {
+            position: relative;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .gs-icon {
+            width: 72px;
+            height: 72px;
+            background-color: var(--primary-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            position: relative;
+            z-index: 2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gs-step:hover .gs-icon {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(55, 133, 238, 0.15);
+        }
+
+        .gs-icon svg {
+            width: 28px;
+            height: 28px;
+            stroke-width: 2;
+        }
+
+        .gs-number {
+            position: absolute;
+            top: 0;
+            right: -25px;
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--primary);
+            z-index: 3;
+            background: none;
+            padding: 0 4px;
+        }
+
+        .gs-step h4 {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .gs-step p {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            max-width: 200px;
+        }
+
+        /* ========================================================
+           S3: BEFORE VS AFTER
+           ======================================================== */
+        .section-bna {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .bna-wrapper {
+            background: var(--card-bg);
+            border-radius: 32px;
+            padding: 60px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+        }
+
+        .bna-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .bna-header h2 {
+            font-size: 38px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .bna-body {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr 1fr;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .bna-card {
+            padding: 30px;
+            border-radius: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .bna-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .bna-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .bna-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-dark);
+            line-height: 1.5;
+        }
+
+        .bna-list svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .before-card {
+            background-color: var(--before-bg);
+            border: 1px solid var(--before-border);
+        }
+
+        .before-card h3 {
+            color: var(--before-text);
+        }
+
+        .before-card .bna-list svg {
+            fill: var(--before-text);
+            stroke: #ffffff;
+        }
+
+        .after-card {
+            background-color: var(--after-bg);
+            border: 1px solid var(--after-border);
+        }
+
+        .after-card h3 {
+            color: var(--after-text);
+        }
+
+        .after-card .bna-list svg {
+            fill: var(--after-text);
+            stroke: #ffffff;
+        }
+
+        .bna-arrow {
+            width: 48px;
+            height: 48px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(55, 133, 238, 0.3);
+            flex-shrink: 0;
+        }
+
+        .bna-image-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: relative;
+        }
+
+        .bna-image-container img {
+            width: 100%;
+            max-width: 280px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.08));
+            animation: floatShield 6s ease-in-out infinite;
+        }
+
+        @keyframes floatShield {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        /* ========================================================
+           S4: ROLE-BASED EXPERIENCE (TABS)
+           ======================================================== */
+        .section-roles {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .roles-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .roles-header h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .role-tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .role-tab-btn {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            color: var(--text-gray);
+            font-size: 15px;
+            font-weight: 600;
+            padding: 14px 28px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+        }
+
+        .role-tab-btn:hover {
+            border-color: #cbd5e1;
+            color: var(--text-dark);
+            transform: translateY(-2px);
+        }
+
+        .role-tab-btn.active {
+            border-color: var(--primary);
+            color: var(--primary);
+            box-shadow: 0 10px 20px rgba(55, 133, 238, 0.1);
+        }
+
+        .role-content-wrapper {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 80px;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+
+        .role-content-wrapper.fade-out {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+
+        .role-image-col {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .role-image-col img {
+            width: 100%;
+            max-width: 550px;
+            height: auto;
+            border-radius: 20px;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12));
+        }
+
+        .role-text-col {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .role-text-col h3 {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+        }
+
+        .role-checklist {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .role-checklist li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .role-checklist svg {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* ========================================================
+           S5: STANDARDIZED EMERGENCY CODES
+           ======================================================== */
+        .section-codes {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .codes-wrapper {
+            background-color: var(--wrapper-bg);
+            border-radius: 32px;
+            padding: 60px 80px 40px 80px;
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.01);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .codes-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .codes-header h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .codes-header h2 span {
+            color: var(--primary);
+        }
+
+        .codes-header p {
+            font-size: 16px;
+            color: var(--text-gray);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .codes-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            align-items: flex-start;
+        }
+
+        .code-card {
+            background-color: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .code-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border-color: #cbd5e1;
+            z-index: 10;
+        }
+
+        .code-icon {
+            width: 54px;
+            height: 54px;
+            object-fit: contain;
+            flex-shrink: 0;
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 10px;
+            border: 1px solid var(--border);
+        }
+
+        .code-text {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            justify-content: flex-start;
+            flex-grow: 1;
+        }
+
+        .code-text h4 {
+            font-size: 16px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+            line-height: 1.2;
+            margin-bottom: 2px;
+        }
+
+        .code-desc-short {
+            font-size: 14px;
+            color: var(--text-gray);
+            line-height: 1.4;
+            margin: 0;
+            font-weight: 500;
+        }
+
+        .code-desc-long {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .code-card:hover .code-desc-long {
+            max-height: 180px;
+            opacity: 1;
+            margin-top: 8px;
+        }
+
+        .custom-codes-note {
+            text-align: center;
+            color: var(--primary);
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .custom-codes-note svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .color-blue {
+            color: #3B82F6;
+        }
+
+        .color-pink {
+            color: #EC4899;
+        }
+
+        .color-orange {
+            color: #F97316;
+        }
+
+        .color-purple {
+            color: #8B5CF6;
+        }
+
+        .color-green {
+            color: #22C55E;
+        }
+
+        .color-red {
+            color: #EF4444;
+        }
+
+        .color-brown {
+            color: #92400e;
+        }
+
+        .color-yellow {
+            color: #EAB308;
+        }
+
+        .color-black {
+            color: #000000;
+        }
+
+        .color-silver {
+            color: #64748B;
+        }
+
+        .color-indigo {
+            color: #4338CA;
+        }
+
+        .color-white {
+            color: #94A3B8;
+        }
+
+        /* ========================================================
+           S6: MULTI-CHANNEL ALERTS
+           ======================================================== */
+        .section-multichannel {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .mc-wrapper {
+            background: var(--card-bg);
+            border-radius: 32px;
+            padding: 60px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .mc-left {
+            max-width: 480px;
+        }
+
+        .mc-left h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .mc-left p {
+            font-size: 16px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 40px;
+        }
+
+        .mc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .mc-list li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 15px;
+            color: var(--text-gray);
+            line-height: 1.5;
+            transition: transform 0.3s ease;
+        }
+
+        .mc-list li:hover {
+            transform: translateX(5px);
+        }
+
+        .mc-list li strong {
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+
+        .mc-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .mc-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2.5;
+        }
+
+        .icon-blue {
+            background-color: var(--icon-blue-bg);
+            color: var(--icon-blue-text);
+        }
+
+        .icon-green {
+            background-color: var(--icon-green-bg);
+            color: var(--icon-green-text);
+        }
+
+        .icon-purple {
+            background-color: var(--icon-purple-bg);
+            color: var(--icon-purple-text);
+        }
+
+        .mc-right {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 20px;
+        }
+
+        .phone-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+            flex: 1;
+        }
+
+        .phone-item img {
+            width: 100%;
+            max-width: 260px;
+            height: auto;
+            filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
+            transition: transform 0.4s ease;
+            border-radius: 36px;
+        }
+
+        .phone-item:hover img {
+            transform: translateY(-10px);
+        }
+
+        .phone-item span {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        /* ========================================================
+           S7: AUTOMATIC ESCALATION
+           ======================================================== */
+        .section-escalation {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .esc-wrapper {
+            background: var(--card-bg);
+            border-radius: 32px;
+            padding: 60px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            display: grid;
+            grid-template-columns: 1fr 1.6fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .esc-left {
+            max-width: 480px;
+        }
+
+        .esc-left h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .esc-left p {
+            font-size: 16px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .esc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .esc-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .esc-list svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--primary);
+            color: #ffffff;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .esc-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .flow-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            align-self: center;
+        }
+
+        .flow-track {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            position: relative;
+        }
+
+        .flow-card {
+            background: #ffffff;
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 30px 15px 40px 15px;
+            width: 28%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+            transition: transform 0.3s ease;
+        }
+
+        .flow-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+        }
+
+        .flow-card.escalated {
+            border-color: var(--card-red-border);
+            background-color: var(--card-red-bg);
+        }
+
+        .fc-icon {
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            background: #f8fafc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border: 1px solid var(--border);
+        }
+
+        .flow-card.escalated .fc-icon {
+            background: #ffffff;
+            border-color: var(--card-red-border);
+        }
+
+        .fc-icon svg {
+            width: 26px;
+            height: 26px;
+            stroke-width: 2;
+        }
+
+        .c-purple svg {
+            color: var(--c-purple);
+        }
+
+        .c-gray svg {
+            color: var(--icon-gray);
+        }
+
+        .c-red svg {
+            color: var(--text-red);
+        }
+
+        .fc-title {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 6px;
+        }
+
+        .fc-desc {
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        .fc-sub {
+            font-size: 12px;
+            color: var(--text-red);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .flow-card.escalated .fc-title {
+            color: var(--text-red);
+        }
+
+        .time-badge {
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffffff;
+            border: 2px solid var(--border);
+            color: var(--primary);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 800;
+            z-index: 2;
+        }
+
+        .flow-arrow {
+            flex-grow: 1;
+            height: 2px;
+            border-bottom: 2px dashed var(--primary);
+            position: relative;
+            margin: 0 10px;
+            opacity: 0.8;
+        }
+
+        .flow-arrow::after {
+            content: '';
+            position: absolute;
+            right: -2px;
+            top: -5px;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+            border-left: 8px solid var(--primary);
+        }
+
+        /* ========================================================
+           S8: ROLE-BASED ACCESS (Orbit Diagram)
+           ======================================================== */
+        .section-rba {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .rba-wrapper {
+            background: var(--card-bg);
+            border-radius: 32px;
+            padding: 60px 80px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .rba-diagram-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .rba-diagram {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            flex-shrink: 0;
+        }
+
+        .orbit-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            border: 2px dashed #cbd5e1;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .spoke {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 140px;
+            height: 0;
+            border-top: 2px dashed #cbd5e1;
+            transform-origin: left center;
+            z-index: 1;
+        }
+
+        .spoke-1 {
+            transform: rotate(270deg);
+        }
+
+        .spoke-2 {
+            transform: rotate(330deg);
+        }
+
+        .spoke-3 {
+            transform: rotate(30deg);
+        }
+
+        .spoke-4 {
+            transform: rotate(90deg);
+        }
+
+        .spoke-5 {
+            transform: rotate(150deg);
+        }
+
+        .spoke-6 {
+            transform: rotate(210deg);
+        }
+
+        .center-node {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90px;
+            height: 90px;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            z-index: 5;
+            box-shadow: 0 0 0 12px rgba(55, 133, 238, 0.08);
+            transition: transform 0.4s ease;
+        }
+
+        .center-node svg {
+            width: 40px;
+            height: 40px;
+            fill: currentColor;
+            stroke-width: 1.5;
+        }
+
+        .rba-diagram:hover .center-node {
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        .orbit-node {
+            position: absolute;
+            width: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            z-index: 3;
+            transform: translate(-50%, -50%);
+            transition: transform 0.3s ease;
+        }
+
+        .orbit-node:hover {
+            transform: translate(-50%, -55%);
+            cursor: default;
+        }
+
+        .node-1 {
+            top: 60px;
+            left: 200px;
+        }
+
+        .node-2 {
+            top: 140px;
+            left: 321px;
+        }
+
+        .node-3 {
+            top: 290px;
+            left: 321px;
+        }
+
+        .node-4 {
+            top: 360px;
+            left: 200px;
+        }
+
+        .node-5 {
+            top: 290px;
+            left: 79px;
+        }
+
+        .node-6 {
+            top: 140px;
+            left: 79px;
+        }
+
+        .node-icon {
+            width: 68px;
+            height: 68px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid;
+            margin-bottom: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .node-icon svg {
+            width: 22px;
+            height: 22px;
+            stroke-width: 2.5;
+        }
+
+        .orbit-node span {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.2;
+        }
+
+        .node-1 .node-icon {
+            border-color: var(--c-purple-bg);
+            color: var(--c-purple);
+        }
+
+        .node-2 .node-icon {
+            border-color: var(--c-green-bg);
+            color: var(--c-green);
+        }
+
+        .node-3 .node-icon {
+            border-color: var(--c-blue-bg);
+            color: var(--c-blue);
+        }
+
+        .node-4 .node-icon {
+            border-color: var(--c-teal-bg);
+            color: var(--c-teal);
+        }
+
+        .node-5 .node-icon {
+            border-color: var(--c-orange-bg);
+            color: var(--c-orange);
+        }
+
+        .node-6 .node-icon {
+            border-color: var(--c-indigo-bg);
+            color: var(--c-indigo);
+        }
+
+        .rba-content h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+
+        .rba-content p {
+            font-size: 16px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 480px;
+        }
+
+        .rba-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .rba-list li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-gray);
+            line-height: 1.5;
+        }
+
+        .rba-list svg {
+            width: 22px;
+            height: 22px;
+            color: var(--primary);
+            flex-shrink: 0;
+            stroke-width: 2.5;
+        }
+
+        /* ========================================================
+           S9: REPORTS & ANALYTICS
+           ======================================================== */
+        .section-reports {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .reports-wrapper {
+            background: var(--card-bg);
+            border-radius: 32px;
+            padding: 60px 80px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.03);
+            border: 1px solid rgba(226, 232, 240, 0.6);
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .reports-content {
+            max-width: 500px;
+        }
+
+        .reports-content h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .reports-content p {
+            font-size: 16px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .reports-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .reports-list li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+            line-height: 1.5;
+            transition: transform 0.3s ease;
+        }
+
+        .reports-list li:hover {
+            transform: translateX(5px);
+        }
+
+        .reports-list svg {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+            flex-shrink: 0;
+            stroke-width: 2.5;
+        }
+
+        .reports-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .reports-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.12));
+            transition: transform 0.4s ease;
+            border: 1px solid var(--border);
+        }
+
+        .reports-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* ========================================================
+           S10: COMPARISON TABLE
+           ======================================================== */
+        .section-comparison {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .comp-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .comp-header h2 {
+            font-size: 42px;
+            font-weight: 800;
+            color: var(--text-dark);
+            line-height: 1.2;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .comp-table-wrapper {
+            background: #ffffff;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .comp-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+            text-align: left;
+        }
+
+        .comp-table th {
+            padding: 24px 20px;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            background-color: #f8fafc;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .comp-table th:first-child {
+            padding-left: 30px;
+            border-top-left-radius: 20px;
+        }
+
+        .comp-table th:last-child {
+            border-top-right-radius: 20px;
+        }
+
+        .comp-table th.highlight-col {
+            background-color: #dbeafe;
+            color: var(--primary-dark);
+        }
+
+        .comp-table td {
+            padding: 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-gray);
+            border-bottom: 1px solid var(--border);
+            vertical-align: middle;
+        }
+
+        .comp-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comp-table td:first-child {
+            padding-left: 30px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .comp-table td.highlight-col {
+            background-color: #f0f7ff;
+            color: var(--text-dark);
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .status svg {
+            width: 18px;
+            height: 18px;
+            stroke-width: 3;
+        }
+
+        .icon-yes {
+            color: var(--color-success);
+        }
+
+        .icon-no {
+            color: var(--color-error);
+        }
+
+        .icon-warn {
+            color: var(--color-warn);
+        }
+
+        /* ========================================================
+           S11: FOOTER & CTA
+           ======================================================== */
+        .footer-banner-wrapper {
+            padding: 80px 0 40px 0;
+        }
+
+        .footer-banner {
+            background: linear-gradient(90deg, #3B82F6 0%, #3b82f6 100%);
+            border-radius: 32px;
+            padding: 50px 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            max-width: 450px;
+            color: #ffffff;
+        }
+
+        .banner-content h2 {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .banner-content p {
+            font-size: 15px;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .banner-graphic {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+
+        .banner-graphic svg {
+            width: 350px;
+            height: auto;
+            stroke: #ffffff;
+            stroke-width: 10;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            fill: none;
+        }
+
+        .banner-buttons {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .btn-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-white {
+            background-color: #ffffff;
+            color: var(--primary-dark);
+            border: 2px solid #ffffff;
+        }
+
+        .btn-white:hover {
+            background-color: #f8fafc;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-outline-white {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .btn-outline-white:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .footer-main {
+            padding: 80px 0 40px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 60px;
+        }
+
+        .footer-brand .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .logo-icon {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+        }
+
+        .footer-brand p {
+            font-size: 15px;
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 30px;
+            max-width: 350px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: #e0ecff;
+            color: var(--primary);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background-color: var(--primary);
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 24px;
+        }
+
+        .footer-col ul {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-col a {
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+            transform: translateX(3px);
+            display: inline-block;
+        }
+
+        .contact-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .contact-list svg {
+            width: 18px;
+            height: 18px;
+            color: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .footer-bottom p {
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .legal-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .legal-links a {
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: 500;
+        }
+
+        .legal-links a:hover {
+            color: var(--primary);
+        }
+
+        .legal-divider {
+            color: #cbd5e1;
+        }
+
+
+        /* ========================================================
+           GLOBAL ANIMATION CLASSES
+           ======================================================== */
+        .gsap-fade-in {
+            opacity: 0;
+            will-change: opacity, transform;
+        }
+
+        .gsap-slide-up {
+            opacity: 0;
+            transform: translateY(30px);
+            will-change: opacity, transform;
+        }
+
+        .gsap-stagger-up>* {
+            opacity: 0;
+            transform: translateY(30px);
+            will-change: opacity, transform;
+        }
+
+        @keyframes simpleFadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes simpleSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gsap-fade-in.is-visible {
+            animation: simpleFadeIn 1s ease-out forwards;
+        }
+
+        .gsap-slide-up.is-visible {
+            animation: simpleSlideUp 0.8s ease-out forwards;
+        }
+
+        .gsap-stagger-up>*.is-visible {
+            animation: simpleSlideUp 0.8s ease-out forwards;
+        }
+
+        /* ========================================================
+           CONSOLIDATED RESPONSIVE MEDIA QUERIES
+           ======================================================== */
+        @media (max-width: 1200px) {
+            .features-hero h1 {
+                font-size: 52px;
+            }
+
+            .bna-wrapper,
+            .mc-wrapper,
+            .esc-wrapper,
+            .rba-wrapper,
+            .reports-wrapper {
+                padding: 50px 40px;
+                gap: 40px;
+            }
+
+            .codes-wrapper {
+                padding: 50px 40px;
+            }
+
+            .codes-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .rba-content h2,
+            .reports-content h2 {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .bna-body {
+                grid-template-columns: 1fr auto 1fr;
+            }
+
+            .bna-image-container {
+                display: none;
+            }
+
+            .role-content-wrapper {
+                gap: 40px;
+            }
+
+            .role-text-col h3 {
+                font-size: 24px;
+            }
+        }
+
+        @media(max-width: 992px) {
+            :root {
+                --hero-x: 0px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .navbar {
+                padding: 25px 25px;
+            }
+
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                padding: 20px;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                border-radius: 0 0 20px 20px;
+                backdrop-filter: blur(10px);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-btn.desktop-only {
+                display: none;
+            }
+
+            .features-hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                min-height: auto;
+                padding-top: 40px;
+            }
+
+            .features-hero-left {
+                padding-right: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .features-hero h1 {
+                font-size: 48px;
+            }
+
+            .features-buttons,
+            .features-list {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .feat-item {
+                align-items: center;
+                text-align: center;
+            }
+
+            .features-hero-right {
+                padding-top: 20px;
+                padding-bottom: 60px;
+                display: flex;
+                justify-content: center;
+            }
+
+            .features-hero-right img {
+                width: 100%;
+                max-width: 600px;
+                transform: translateX(0);
+            }
+
+            .mc-wrapper,
+            .esc-wrapper,
+            .rba-wrapper,
+            .reports-wrapper {
+                grid-template-columns: 1fr;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .mc-left,
+            .esc-left,
+            .rba-content,
+            .reports-content {
+                max-width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .mc-list li,
+            .esc-list li,
+            .rba-list li,
+            .reports-list li {
+                text-align: left;
+            }
+
+            .rba-list,
+            .reports-list {
+                display: inline-flex;
+                width: fit-content;
+                align-items: flex-start;
+            }
+
+            .mc-right {
+                justify-content: center;
+                gap: 30px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+
+            .phone-item {
+                flex: 0 0 calc(33.333% - 20px);
+                min-width: 200px;
+            }
+
+            .esc-right {
+                margin-top: 20px;
+            }
+
+            .rba-diagram {
+                margin: 0 auto 40px auto;
+                transform: scale(0.9);
+                transform-origin: center center;
+            }
+
+            .codes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .codes-header h2 {
+                font-size: 36px;
+            }
+
+            .gs-step:not(:last-child)::after {
+                left: 70px;
+                right: 10px;
+            }
+
+            .gs-step {
+                padding-right: 10px;
+            }
+
+            .container {
+                padding: 0 25px;
+            }
+
+            .features-hero {
+                padding-left: 25px;
+                padding-right: 25px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .features-hero h1 {
+                font-size: 38px;
+            }
+
+            .features-buttons,
+            .banner-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .features-buttons a,
+            .btn-banner {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .bna-wrapper,
+            .mc-wrapper,
+            .esc-wrapper,
+            .rba-wrapper,
+            .codes-wrapper,
+            .reports-wrapper {
+                padding: 40px 25px;
+                border-radius: 24px;
+            }
+
+            .bna-header h2,
+            .roles-header h2,
+            .mc-left h2,
+            .esc-left h2,
+            .codes-header h2,
+            .comp-header h2,
+            .gs-header h2 {
+                font-size: 32px;
+            }
+
+            .bna-body {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                gap: 24px;
+            }
+
+            .bna-card {
+                width: 100%;
+                max-width: 500px;
+                padding: 24px;
+            }
+
+            .bna-arrow {
+                transform: rotate(90deg);
+            }
+
+            .role-content-wrapper {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 50px;
+            }
+
+            .role-image-col {
+                order: 1;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .role-text-col {
+                order: 2;
+                align-items: center;
+                text-align: center;
+            }
+
+            .role-checklist li {
+                text-align: left;
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .mc-list {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .phone-item {
+                flex: 0 0 100%;
+                max-width: 280px;
+            }
+
+            .flow-track {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .flow-card {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .flow-arrow {
+                width: 2px;
+                height: 30px;
+                border-bottom: none;
+                border-left: 2px dashed var(--primary);
+                margin: 0;
+            }
+
+            .flow-arrow::after {
+                right: auto;
+                left: -5px;
+                top: auto;
+                bottom: -2px;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-top: 8px solid var(--primary);
+                border-bottom: none;
+            }
+
+            .codes-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .code-card {
+                height: auto;
+                padding: 20px;
+            }
+
+            .code-desc-long {
+                max-height: 150px;
+                opacity: 1;
+                margin-top: 8px;
+            }
+
+            .code-card:hover {
+                transform: none;
+            }
+
+            .reports-list {
+                width: 100%;
+                max-width: 400px;
+            }
+
+            .comp-table th,
+            .comp-table td {
+                padding: 16px;
+                font-size: 14px;
+            }
+
+            .comp-table th:first-child,
+            .comp-table td:first-child {
+                padding-left: 20px;
+            }
+
+            .gs-steps-wrapper {
+                flex-direction: column;
+                gap: 50px;
+                align-items: center;
+                text-align: center;
+            }
+
+            .gs-step {
+                align-items: center;
+                padding-right: 0;
+            }
+
+            .gs-step:not(:last-child)::after {
+                top: 72px;
+                bottom: -50px;
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
+                width: 0;
+                height: 50px;
+                border-top: none;
+                border-left: 2px dotted #93c5fd;
+            }
+
+            .gs-icon-group {
+                display: flex;
+                justify-content: center;
+            }
+
+            .gs-number {
+                right: auto;
+                left: 60px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .role-tabs {
+                gap: 10px;
+            }
+
+            .role-tab-btn {
+                padding: 10px 18px;
+                font-size: 14px;
+            }
+
+            .rba-wrapper {
+                overflow: visible;
+            }
+
+            .rba-content h2 {
+                font-size: 30px;
+            }
+
+            .rba-diagram-wrapper {
+                height: 380px;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .rba-diagram {
+                transform: scale(0.8);
+            }
+
+            .rba-list {
+                width: 100%;
+            }
+
+            .rba-list li {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .rba-diagram-wrapper {
+                height: 300px;
+            }
+
+            .rba-diagram {
+                transform: scale(0.65);
+            }
+
+            .rba-content h2 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="background">
+
+        <header class="navbar">
+            <div class="logo gsap-fade-in">
+                <img src="assets/logo.png" alt="RoghanCare Logo">
+                <span>RoghanCare</span>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i data-feather="menu"></i>
+            </div>
+
+            <div class="nav-links gsap-fade-in" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="solution.html">Solutions</a>
+                <a href="feature.html" class="active">Features</a>
+                <a href="faq.html">FAQs</a>
+                <a href="index.html#contact-us">Contact</a>
+            </div>
+
+            <a href="index.html#contact-us" class="nav-btn desktop-only gsap-fade-in">Book Demo →</a>
+        </header>
+
+        <section class="features-hero">
+            <div class="features-hero-left">
+                <div class="badge gsap-slide-up"><i data-feather="star" class="badge-icon"></i> AMAZING FEATURES</div>
+                <h1 class="gsap-slide-up">Instant Alerts.<br><span>Critical Responses.</span></h1>
+                <p class="gsap-slide-up">Designed for high-trust healthcare environments. We combine architectural
+                    precision with medical safety to ensure every alert reaches the right responder every time.</p>
+                <div class="features-buttons gsap-slide-up">
+                    <a href="/contact-us.html" class="btn-primary">Request a Demo <i data-feather="arrow-right"
+                            style="width: 18px; height: 18px;"></i></a>
+                    <a href="#explore-features" class="btn-secondary">Explore Features</a>
+                </div>
+                <div class="features-list gsap-stagger-up">
+                    <div class="feat-item">
+                        <div class="feat-icon"><i data-feather="zap"></i></div>
+                        <strong>Real-time Alerts</strong>
+                        <span>Instant updates when it matters most</span>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon"><i data-feather="shield"></i></div>
+                        <strong>Smart Automation</strong>
+                        <span>Reduce manual work and save time</span>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon"><i data-feather="users"></i></div>
+                        <strong>Team Collaboration</strong>
+                        <span>Everyone stays in sync at every step</span>
+                    </div>
+                </div>
+            </div>
+            <div class="features-hero-right gsap-fade-in">
+                <img src="assets/rogancare-website.png" alt="RoghanCare Dashboard and Application Interface">
+            </div>
+        </section>
+
+    </div>
+
+    <div id="explore-features"></div>
+
+    <section class="section-get-started">
+        <div class="container">
+            <div class="gs-header gsap-slide-up">
+                <div class="badge"><i data-feather="zap"></i> GET STARTED</div>
+                <h2>Go Live in 4 Simple Steps</h2>
+            </div>
+            <div class="gs-steps-wrapper gsap-stagger-up">
+                <div class="gs-step">
+                    <div class="gs-icon-group">
+                        <div class="gs-icon"><i data-feather="layout"></i></div>
+                        <div class="gs-number">01</div>
+                    </div>
+                    <h4>Create Organization</h4>
+                    <p>Sign up and set up your healthcare organization.</p>
+                </div>
+                <div class="gs-step">
+                    <div class="gs-icon-group">
+                        <div class="gs-icon"><i data-feather="user-plus"></i></div>
+                        <div class="gs-number">02</div>
+                    </div>
+                    <h4>Add Your Team</h4>
+                    <p>Invite team members and assign roles.</p>
+                </div>
+                <div class="gs-step">
+                    <div class="gs-icon-group">
+                        <div class="gs-icon"><i data-feather="users"></i></div>
+                        <div class="gs-number">03</div>
+                    </div>
+                    <h4>Configure Alerts</h4>
+                    <p>Customize alert rules and escalation workflows.</p>
+                </div>
+                <div class="gs-step">
+                    <div class="gs-icon-group">
+                        <div class="gs-icon"><i data-feather="activity"></i></div>
+                        <div class="gs-number">04</div>
+                    </div>
+                    <h4>Go Live</h4>
+                    <p>Start receiving alerts and respond with confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-bna">
+        <div class="container">
+            <div class="bna-wrapper gsap-slide-up">
+                <div class="bna-header">
+                    <div class="badge"><i data-feather="plus"></i> TRANSFORMING RESPONSE</div>
+                    <h2>Before vs After RoghanCare</h2>
+                </div>
+                <div class="bna-body gsap-stagger-up">
+                    <div class="bna-card before-card">
+                        <h3>Before RoghanCare</h3>
+                        <ul class="bna-list">
+                            <li><i data-feather="x-circle"></i> Delayed responses to critical events</li>
+                            <li><i data-feather="x-circle"></i> Missed or unclear alerts</li>
+                            <li><i data-feather="x-circle"></i> Manual communication processes</li>
+                            <li><i data-feather="x-circle"></i> Disconnected systems & silos</li>
+                            <li><i data-feather="x-circle"></i> Limited visibility & reporting</li>
+                        </ul>
+                    </div>
+                    <div class="bna-arrow"><i data-feather="arrow-right"></i></div>
+                    <div class="bna-card after-card">
+                        <h3>After RoghanCare</h3>
+                        <ul class="bna-list">
+                            <li><i data-feather="check-circle"></i> Instant alerts reach the right people</li>
+                            <li><i data-feather="check-circle"></i> Automated escalation & workflows</li>
+                            <li><i data-feather="check-circle"></i> Unified communication platform</li>
+                            <li><i data-feather="check-circle"></i> All systems connected in real-time</li>
+                            <li><i data-feather="check-circle"></i> Complete visibility & actionable insights</li>
+                        </ul>
+                    </div>
+                    <div class="bna-image-container">
+                        <img src="assets/section-6-right.png" alt="RoghanCare Security Shield">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-roles">
+        <div class="container">
+            <div class="roles-header gsap-slide-up">
+                <div class="badge"><i data-feather="plus"></i> ROLE-BASED EXPERIENCE</div>
+                <h2>Built for Every Role in Your Organization</h2>
+            </div>
+            <div class="role-tabs gsap-slide-up" id="role-tabs">
+                <button class="role-tab-btn active" data-role="doctors">Doctors</button>
+                <button class="role-tab-btn" data-role="nurses">Nurses</button>
+                <button class="role-tab-btn" data-role="administrators">Administrators</button>
+                <button class="role-tab-btn" data-role="security">Security Staff</button>
+                <button class="role-tab-btn" data-role="emergency">Emergency Teams</button>
+            </div>
+            <div class="role-content-wrapper gsap-slide-up" id="role-content">
+                <div class="role-image-col">
+                    <img id="dyn-role-img" src="assets/feature-s3.png" alt="Doctor using RoghanCare tablet">
+                </div>
+                <div class="role-text-col">
+                    <h3 id="dyn-role-title">Doctors Stay Informed & In Control</h3>
+                    <ul class="role-checklist" id="dyn-role-list">
+                        <li><i data-feather="check-circle"></i> Receive critical alerts instantly</li>
+                        <li><i data-feather="check-circle"></i> View patient & incident details</li>
+                        <li><i data-feather="check-circle"></i> Communicate with the right team</li>
+                        <li><i data-feather="check-circle"></i> Take action from anywhere</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-codes">
+        <div class="container">
+            <div class="codes-wrapper gsap-slide-up">
+                <div class="codes-header">
+                    <div class="badge"><i data-feather="plus"></i> STANDARDIZED PROTOCOLS</div>
+                    <h2>Supports All Standard<br><span>Emergency Codes</span></h2>
+                    <p>RoghanCare is pre-configured with globally recognized medical emergency color codes, allowing
+                        your team to deploy instantly while maintaining the flexibility to add custom alerts.</p>
+                </div>
+                <div class="codes-grid gsap-stagger-up">
+                    <div class="code-card">
+                        <img src="assets/code-blue.png" alt="Code Blue" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-blue">CODE BLUE</h4>
+                            <p class="code-desc-short">Cardiac Arrest</p>
+                            <p class="code-desc-long">Used for life-threatening medical emergencies such as cardiac or
+                                respiratory arrest requiring immediate resuscitation.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-pink.png" alt="Code Pink" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-pink">CODE PINK</h4>
+                            <p class="code-desc-short">Pediatric Emergency</p>
+                            <p class="code-desc-long">Activated during pediatric or infant emergencies where rapid
+                                medical intervention is critical.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-orange.png" alt="Code Orange" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-orange">CODE ORANGE</h4>
+                            <p class="code-desc-short">Mass Casualty</p>
+                            <p class="code-desc-long">Declared during mass casualty incidents requiring rapid
+                                coordination, triage, and resource management.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-purple.png" alt="Code Purple" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-purple">CODE PURPLE</h4>
+                            <p class="code-desc-short">Obstetric Emergency</p>
+                            <p class="code-desc-long">Used for obstetric and maternity-related emergencies requiring
+                                immediate assistance for maternal or neonatal care.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-green.png" alt="Code Green" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-green">CODE GREEN</h4>
+                            <p class="code-desc-short">Evacuation</p>
+                            <p class="code-desc-long">Activated during partial or full evacuation situations caused by
+                                safety threats or operational emergencies.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-red.png" alt="Code Red" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-red">CODE RED</h4>
+                            <p class="code-desc-short">Fire / Smoke</p>
+                            <p class="code-desc-long">Used to report fire, smoke, or potential fire hazards requiring
+                                immediate evacuation procedures.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-brown.png" alt="Code Brown" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-brown">CODE BROWN</h4>
+                            <p class="code-desc-short">Hazardous Material</p>
+                            <p class="code-desc-long">Declared during hazardous spills or contamination events requiring
+                                containment and safety protocols.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-yellow.png" alt="Code Yellow" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-yellow">CODE YELLOW</h4>
+                            <p class="code-desc-short">Missing Person</p>
+                            <p class="code-desc-long">Used for missing, vulnerable, or wandering persons requiring
+                                immediate search coordination.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-black.png" alt="Code Black" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-black">CODE BLACK</h4>
+                            <p class="code-desc-short">Security Threat</p>
+                            <p class="code-desc-long">Activated during bomb threats or suspicious packages requiring
+                                lockdown and security response.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-silver.png" alt="Code Silver" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-silver">CODE SILVER</h4>
+                            <p class="code-desc-short">IT Systems Failure</p>
+                            <p class="code-desc-long">Used during IT system failures or cybersecurity incidents
+                                affecting operational continuity.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-indigo.png" alt="Code Indigo" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-indigo">CODE INDIGO</h4>
+                            <p class="code-desc-short">Infectious Disease</p>
+                            <p class="code-desc-long">Declared for infectious disease outbreaks requiring isolation and
+                                infection control measures.</p>
+                        </div>
+                    </div>
+                    <div class="code-card">
+                        <img src="assets/code-white.png" alt="Code White" class="code-icon">
+                        <div class="code-text">
+                            <h4 class="color-white">CODE WHITE</h4>
+                            <p class="code-desc-short">Aggressive Person</p>
+                            <p class="code-desc-long">Used to manage aggressive or violent individuals posing risks to
+                                staff, patients, or public safety.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom-codes-note gsap-slide-up">
+                    <i data-feather="settings"></i> Custom codes can be configured as per requirement.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-multichannel">
+        <div class="container">
+            <div class="mc-wrapper gsap-slide-up">
+                <div class="mc-left">
+                    <h2>Multi-Channel Alerts.<br>Maximum Reach.</h2>
+                    <p>Ensure critical messages reach the right people, every time, through multiple reliable channels.
+                    </p>
+                    <ul class="mc-list gsap-stagger-up">
+                        <li>
+                            <div class="mc-icon icon-blue"><i data-feather="smartphone"></i></div>
+                            <div><strong>In-App Notifications</strong> &ndash; Instant push alerts</div>
+                        </li>
+                        <li>
+                            <div class="mc-icon icon-green"><i data-feather="message-circle"></i></div>
+                            <div><strong>WhatsApp Alerts</strong> &ndash; Widely accessible & instant</div>
+                        </li>
+                        <li>
+                            <div class="mc-icon icon-purple"><i data-feather="phone-call"></i></div>
+                            <div><strong>Voice Call Alerts</strong> &ndash; Reliable backup channel</div>
+                        </li>
+                        <li>
+                            <div class="mc-icon icon-blue"><i data-feather="refresh-cw"></i></div>
+                            <div><strong>Escalation Alerts</strong> &ndash; Auto re-send if no response</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="mc-right gsap-stagger-up">
+                    <div class="phone-item"><img src="assets/in-app-alert.png" alt="In-App Alert"><span>In-App
+                            Alert</span></div>
+                    <div class="phone-item"><img src="assets/whatsapp-alert.png" alt="WhatsApp Alert"><span>WhatsApp
+                            Alert</span></div>
+                    <div class="phone-item"><img src="assets/call-alert.png" alt="Voice Call Alert"><span>Voice Call
+                            Alert</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-escalation">
+        <div class="container">
+            <div class="esc-wrapper gsap-slide-up">
+                <div class="esc-left">
+                    <h2>Automatic Escalation.<br>Always Covered.</h2>
+                    <p>If an alert is not acknowledged within the defined time, it automatically escalates to the next
+                        level.</p>
+                    <ul class="esc-list gsap-stagger-up">
+                        <li><i data-feather="check-circle"></i><span>10-second response window at each level</span></li>
+                        <li><i data-feather="check-circle"></i><span>Escalates from L1 (Head Duty Doctor) to L2 (Medical
+                                Director)</span></li>
+                        <li><i data-feather="check-circle"></i><span>Ensures no critical alert is ever missed</span>
+                        </li>
+                        <li><i data-feather="check-circle"></i><span>Fully configurable escalation rules</span></li>
+                    </ul>
+                </div>
+                <div class="esc-right gsap-stagger-up">
+                    <span class="flow-label">Escalation Flow (Example)</span>
+                    <div class="flow-track">
+                        <div class="flow-card">
+                            <div class="fc-icon c-purple"><i data-feather="user"></i></div>
+                            <div class="fc-title">Alert Triggered</div>
+                            <div class="fc-desc">Operator / SmartTAP</div>
+                            <div class="time-badge">0s</div>
+                        </div>
+                        <div class="flow-arrow"></div>
+                        <div class="flow-card">
+                            <div class="fc-icon c-gray"><i data-feather="user"></i></div>
+                            <div class="fc-title">Level 1 (L1)</div>
+                            <div class="fc-desc">Head Duty Doctor</div>
+                            <div class="time-badge">10s</div>
+                        </div>
+                        <div class="flow-arrow"></div>
+                        <div class="flow-card escalated">
+                            <div class="fc-icon c-red"><i data-feather="user-plus"></i></div>
+                            <div class="fc-title">Level 2 (L2)</div>
+                            <div class="fc-desc">Medical Director</div>
+                            <div class="fc-sub">(Escalated)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-rba">
+        <div class="container">
+            <div class="rba-wrapper gsap-slide-up">
+                <div class="rba-diagram-wrapper">
+                    <div class="rba-diagram">
+                        <div class="orbit-ring"></div>
+                        <div class="spoke spoke-1"></div>
+                        <div class="spoke spoke-2"></div>
+                        <div class="spoke spoke-3"></div>
+                        <div class="spoke spoke-4"></div>
+                        <div class="spoke spoke-5"></div>
+                        <div class="spoke spoke-6"></div>
+                        <div class="center-node"><i data-feather="user"></i></div>
+                        <div class="orbit-node node-1">
+                            <div class="node-icon"><i data-feather="user"></i></div><span>Super<br>Admin</span>
+                        </div>
+                        <div class="orbit-node node-2">
+                            <div class="node-icon"><i data-feather="user"></i></div><span>Hospital<br>Admin</span>
+                        </div>
+                        <div class="orbit-node node-3">
+                            <div class="node-icon"><i data-feather="user"></i></div><span>Medical<br>Director</span>
+                        </div>
+                        <div class="orbit-node node-4">
+                            <div class="node-icon"><i data-feather="user"></i></div><span>Head Duty<br>Doctor</span>
+                        </div>
+                        <div class="orbit-node node-5">
+                            <div class="node-icon"><i data-feather="user"></i></div><span>Doctor</span>
+                        </div>
+                        <div class="orbit-node node-6">
+                            <div class="node-icon"><i data-feather="user"></i></div><span>Nurse</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="rba-content">
+                    <h2>Role-Based Access.<br>Right Access, Right Control.</h2>
+                    <p>Granular permissions ensure that every user has access only to what they need.</p>
+                    <ul class="rba-list gsap-stagger-up">
+                        <li><i data-feather="users"></i><span>8 distinct roles with defined permissions</span></li>
+                        <li><i data-feather="lock"></i><span>Secure access to sensitive information</span></li>
+                        <li><i data-feather="clock"></i><span>Activity logs for accountability and audits</span></li>
+                        <li><i data-feather="settings"></i><span>Easy user and role management</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-reports">
+        <div class="container">
+            <div class="reports-wrapper gsap-slide-up">
+                <div class="reports-content">
+                    <h2>Reports & Analytics.<br>Data That Drives Action.</h2>
+                    <p>Powerful reports and dashboards help you track performance, ensure compliance, and improve
+                        outcomes.</p>
+                    <ul class="reports-list gsap-stagger-up">
+                        <li><i data-feather="check-circle"></i><span>Real-time alert and response reports</span></li>
+                        <li><i data-feather="check-circle"></i><span>Response time and acknowledgment tracking</span>
+                        </li>
+                        <li><i data-feather="check-circle"></i><span>Escalation and resolution analytics</span></li>
+                        <li><i data-feather="check-circle"></i><span>Exportable reports for compliance</span></li>
+                    </ul>
+                </div>
+                <div class="reports-image gsap-fade-in">
+                    <img src="assets/feature-report.png" alt="RoghanCare Reports and Analytics Dashboard">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-comparison">
+        <div class="container">
+            <div class="comp-header gsap-slide-up">
+                <div class="badge"><i data-feather="plus"></i> COMPARISON</div>
+                <h2>Why RoghanCare is the Smarter Choice</h2>
+            </div>
+            <div class="comp-table-wrapper gsap-slide-up">
+                <table class="comp-table">
+                    <thead>
+                        <tr>
+                            <th>Features</th>
+                            <th class="highlight-col">RoghanCare</th>
+                            <th>Traditional Systems</th>
+                            <th>Other Solutions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Real-time Alerts</td>
+                            <td class="highlight-col">
+                                <div class="status"><i data-feather="check" class="icon-yes"></i> Instant</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="x" class="icon-no"></i> Delayed</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="alert-triangle" class="icon-warn"></i> Limited
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Auto Escalation</td>
+                            <td class="highlight-col">
+                                <div class="status"><i data-feather="check" class="icon-yes"></i> Yes</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="x" class="icon-no"></i> No</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="alert-triangle" class="icon-warn"></i> Partial
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Multi-tenant Support</td>
+                            <td class="highlight-col">
+                                <div class="status"><i data-feather="check" class="icon-yes"></i> Yes</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="x" class="icon-no"></i> No</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="alert-triangle" class="icon-warn"></i> Limited
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>HIPAA Compliance</td>
+                            <td class="highlight-col">
+                                <div class="status"><i data-feather="check" class="icon-yes"></i> Yes</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="alert-triangle" class="icon-warn"></i> Partial
+                                </div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="alert-triangle" class="icon-warn"></i> Partial
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Audit Logs & Reports</td>
+                            <td class="highlight-col">
+                                <div class="status"><i data-feather="check" class="icon-yes"></i> Advanced</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="x" class="icon-no"></i> Basic</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="alert-triangle" class="icon-warn"></i> Basic</div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Uptime Guarantee</td>
+                            <td class="highlight-col">
+                                <div class="status"><i data-feather="check" class="icon-yes"></i> 99.99%</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="alert-triangle" class="icon-warn"></i> 95%-98%
+                                </div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="alert-triangle" class="icon-warn"></i> 95%-98%
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Mobile App</td>
+                            <td class="highlight-col">
+                                <div class="status"><i data-feather="check" class="icon-yes"></i> Yes</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="x" class="icon-no"></i> No</div>
+                            </td>
+                            <td>
+                                <div class="status"><i data-feather="alert-triangle" class="icon-warn"></i> Limited
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-banner-wrapper">
+        <div class="container">
+            <div class="footer-banner gsap-slide-up">
+                <div class="banner-content">
+                    <h2>Ready to Experience<br>the Power of RoghanCare?</h2>
+                    <p>See how our features can transform your hospital's or organization's emergency communication.</p>
+                </div>
+                <div class="banner-graphic">
+                    <svg viewBox="0 0 350 100">
+                        <path d="M 0 50 L 100 50 L 120 20 L 150 90 L 180 10 L 210 70 L 230 50 L 350 50" />
+                    </svg>
+                </div>
+                <div class="banner-buttons">
+                    <a href="https://wa.me/97100000000" class="btn-primary btn-white">
+                        Chat on Whatsapp <i data-feather="arrow-up-right"></i>
+                    </a>
+                    <a href="/contact-us" class="btn-secondary btn-outline-white">
+                        Talk to Sales <i data-feather="arrow-up-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-main">
+        <div class="container">
+            <div class="footer-grid">
+
+                <div class="footer-col footer-brand">
+                    <div class="logo">
+                        <img src="assets/logo.png" alt="RoghanCare Logo" style="height: 24px;">
+                        <span>RoghanCare</span>
+                    </div>
+                    <p>Next generation Digital alert and communication system for faster response and better outcomes.
+                    </p>
+
+                    <div class="social-links">
+                        <a href="http://facebook.com/" class="social-btn" aria-label="Facebook"><i
+                                data-feather="facebook"></i></a>
+                        <a href="https://x.com/" class="social-btn" aria-label="X / Twitter"><i
+                                data-feather="twitter"></i></a>
+                        <a href="https://instagram.com/" class="social-btn" aria-label="Instagram"><i
+                                data-feather="instagram"></i></a>
+                        <a href="https://linkedin.com/" class="social-btn" aria-label="LinkedIn"><i
+                                data-feather="linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="/solutions">Feature</a></li>
+                        <li><a href="/solutions">Solutions</a></li>
+                        <li><a href="/solutions">Integration</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/about-us">About us</a></li>
+                        <li><a href="/frequently-asked-questions">FAQ's</a></li>
+                        <li><a href="/solutions">Benefits</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Contact us</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i data-feather="phone"></i>
+                            <span>+971 00 000000</span>
+                        </li>
+                        <li>
+                            <i data-feather="mail"></i>
+                            <span>Info@roghancare.com</span>
+                        </li>
+                        <li>
+                            <i data-feather="map-pin"></i>
+                            <span>Dubai, United Arab Emirates</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 RoghanCare LLC. All rights reserved</p>
+                <div class="legal-links">
+                    <a href="/privacy">Privacy Policy</a>
+                    <span class="legal-divider">|</span>
+                    <a href="/terms">Terms of Service</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        // 1. Initialize Feather Icons
+        feather.replace();
+
+        // 2. Mobile Menu Toggle Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu');
+        const navLinks = document.getElementById('nav-links');
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? '<i data-feather="x"></i>' : '<i data-feather="menu"></i>';
+            feather.replace();
+        });
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i data-feather="menu"></i>';
+                feather.replace();
+            });
+        });
+
+        // 3. Navbar Sticky Effect
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                if (!navbar.classList.contains('scrolled')) navbar.classList.add('scrolled');
+            } else {
+                if (navbar.classList.contains('scrolled')) navbar.classList.remove('scrolled');
+            }
+        });
+
+        // 4. Role Tabs Interaction Logic
+        const roleData = {
+            "doctors": { title: "Doctors Stay Informed & In Control", img: "assets/feature-s3.png", list: ["Receive critical alerts instantly", "View patient & incident details", "Communicate with the right team", "Take action from anywhere"] },
+            "nurses": { title: "Nurses Deliver Rapid Patient Care", img: "assets/feature-s3.png", list: ["Get instant Code Blue notifications", "Coordinate with attending physicians", "Log patient vitals and status directly", "Minimize response delays effectively"] },
+            "administrators": { title: "Administrators Oversee Operations", img: "assets/feature-s3.png", list: ["Monitor hospital-wide alert metrics", "Generate compliance and audit reports", "Manage user roles and permissions", "Analyze response times and bottlenecks"] },
+            "security": { title: "Security Staff Ensure Campus Safety", img: "assets/feature-s3.png", list: ["Receive immediate threat alerts", "Coordinate emergency evacuations", "Track incident resolution in real-time", "Communicate with emergency responders"] },
+            "emergency": { title: "Emergency Teams Act with Precision", img: "assets/feature-s3.png", list: ["Get multi-channel dispatch alerts", "Access critical situational context", "Coordinate on-the-go via mobile app", "Auto-escalate unacknowledged alerts"] }
+        };
+
+        const tabs = document.querySelectorAll('.role-tab-btn');
+        const contentWrapper = document.getElementById('role-content');
+        const dynTitle = document.getElementById('dyn-role-title');
+        const dynImg = document.getElementById('dyn-role-img');
+        const dynList = document.getElementById('dyn-role-list');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                if (tab.classList.contains('active')) return;
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                const targetRole = tab.getAttribute('data-role');
+                const newData = roleData[targetRole];
+                contentWrapper.classList.add('fade-out');
+
+                setTimeout(() => {
+                    dynTitle.textContent = newData.title;
+                    dynImg.src = newData.img;
+                    dynList.innerHTML = '';
+                    newData.list.forEach(item => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<i data-feather="check-circle"></i> ${item}`;
+                        dynList.appendChild(li);
+                    });
+                    feather.replace();
+                    contentWrapper.classList.remove('fade-out');
+                }, 400);
+            });
+        });
+
+        // 5. Custom SEO-Friendly URL Single-Page Router (Enhanced from index.html)
+        document.querySelectorAll('a[href^="/"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+
+                // If home link, redirect to index.html OR handle it
+                if (href === '/') {
+                    return; // Let standard behavior happen or handle as needed
+                }
+
+                // Match element ID (e.g., "/solutions" -> "solutions")
+                const targetId = href.substring(1).replace('.html', '');
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    e.preventDefault();
+                    window.history.pushState(null, '', href);
+                    const targetPosition = targetSection.getBoundingClientRect().top + window.scrollY - 100;
+                    window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+                }
+            });
+        });
+
+        // 6. Intersection Observer for GSAP Animations
+        const observerOptions = { root: null, rootMargin: "0px", threshold: 0.1 };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.gsap-slide-up, .gsap-fade-in').forEach((el) => {
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.gsap-stagger-up, .features-list').forEach(container => {
+            Array.from(container.children).forEach((child, index) => {
+                child.style.animationDelay = `${index * 0.1}s`;
+                observer.observe(child);
+            });
+        });
+
+    </script>
+</body>
+
+</html>
