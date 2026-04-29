@@ -1809,7 +1809,7 @@
            S11: FOOTER & CTA
            ======================================================== */
         .footer-banner-wrapper {
-            padding: 80px 0 40px 0;
+            padding: 60px 0 40px 0;
         }
 
         .footer-banner {
@@ -1822,8 +1822,6 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
-            max-width: 1400px;
-            margin: 0 auto;
         }
 
         .banner-content {
@@ -1912,7 +1910,7 @@
 
         .footer-main {
             padding: 80px 0 40px 0;
-            border-top: 1px solid var(--border);
+            border-top: 1px solid var(--bg-light);
         }
 
         .footer-grid {
@@ -2149,6 +2147,28 @@
             }
         }
 
+        @media (max-width: 1100px) {
+            .footer-banner {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+                padding: 50px 30px;
+            }
+
+            .banner-content {
+                max-width: 100%;
+            }
+
+            .banner-graphic {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+            }
+        }
+
         @media(max-width: 992px) {
             :root {
                 --hero-x: 0px;
@@ -2308,6 +2328,25 @@
             .features-hero {
                 padding-left: 25px;
                 padding-right: 25px;
+            }
+            .footer-banner {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+                padding: 50px 30px;
+            }
+
+            .banner-content {
+                max-width: 100%;
+            }
+
+            .banner-graphic {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
             }
         }
 
@@ -2885,7 +2924,7 @@
                         </li>
                         <li>
                             <div class="mc-icon icon-blue"><i data-feather="refresh-cw"></i></div>
-                            <div><strong>Escalation Alerts</strong> &ndash; Auto re-send if no response</div>
+                            <div><strong>Escalation Alerts</strong> &ndash; Auto escalation if no response</div>
                         </li>
                     </ul>
                 </div>
@@ -2983,7 +3022,7 @@
                     <h2>Role-Based Access.<br>Right Access, Right Control.</h2>
                     <p>Granular permissions ensure that every user has access only to what they need.</p>
                     <ul class="rba-list gsap-stagger-up">
-                        <li><i data-feather="users"></i><span>8 distinct roles with defined permissions</span></li>
+                        <li><i data-feather="users"></i><span>Distinct roles with defined permissions</span></li>
                         <li><i data-feather="lock"></i><span>Secure access to sensitive information</span></li>
                         <li><i data-feather="clock"></i><span>Activity logs for accountability and audits</span></li>
                         <li><i data-feather="settings"></i><span>Easy user and role management</span></li>
@@ -3072,7 +3111,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>HIPAA Compliance</td>
+                            <td>Multi-Channel Alerts</td>
                             <td class="highlight-col">
                                 <div class="status"><i data-feather="check" class="icon-yes"></i> Yes</div>
                             </td>
@@ -3181,18 +3220,18 @@
                 <div class="footer-col">
                     <h4>Product</h4>
                     <ul>
-                        <li><a href="/solutions">Feature</a></li>
-                        <li><a href="/solutions">Solutions</a></li>
-                        <li><a href="/solutions">Integration</a></li>
+                        <li><a href="feature.html">Features</a></li>
+                        <li><a href="solution.html">Solutions</a></li>
+                        <li><a href="solution.html#industries">Use Cases</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/about-us">About us</a></li>
-                        <li><a href="/frequently-asked-questions">FAQ's</a></li>
-                        <li><a href="/solutions">Benefits</a></li>
+                        <li><a href="index.html#about-us">About us</a></li>
+                        <li><a href="index.html#frequently-asked-questions">FAQ's</a></li>
+                        <li><a href="feature.html#explore-features">Benefits</a></li>
                     </ul>
                 </div>
 
@@ -3346,4 +3385,4 @@
     </script>
 </body>
 
-</html>
+    </html>
