@@ -191,22 +191,19 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: transparent;
+            background: #e0ecff;
             color: var(--primary);
-            padding: 6px 14px;
+            padding: 8px 14px;
             border-radius: 999px;
-            font-size: 11px;
-            margin-bottom: 16px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            border: 1px solid #bfdbfe;
+            font-size: 13px;
+            margin-bottom: 20px;
+            font-weight: 600;
         }
 
-        .badge svg {
-            width: 14px;
-            height: 14px;
-            stroke-width: 2.5;
+        .badge-icon {
+            width: 16px;
+            height: 16px;
+            fill: none;
         }
 
         /* --- NAVBAR --- */
@@ -216,7 +213,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 40px;
+            padding: 25px 60px;
             transition: 0.3s ease;
         }
 
@@ -280,17 +277,34 @@
             border-radius: 12px;
             font-weight: 500;
             transition: 0.3s;
+            border: 2px solid var(--primary);
         }
 
         .nav-btn:hover {
             background: var(--primary-dark);
+            border-color: var(--primary-dark);
             transform: scale(1.05);
+        }
+
+        .nav-btn.active {
+            background: #ffffff;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .nav-btn.active:hover {
+            background: var(--primary-fade);
         }
 
         .menu-toggle {
             display: none;
             cursor: pointer;
             color: var(--text-dark);
+        }
+
+        .menu-toggle svg {
+            width: 28px;
+            height: 28px;
         }
 
         /* ========================================================
@@ -1946,6 +1960,7 @@
         .social-links {
             display: flex;
             gap: 12px;
+            margin-bottom: 20px;
         }
 
         .social-btn {
@@ -2329,6 +2344,7 @@
                 padding-left: 25px;
                 padding-right: 25px;
             }
+
             .footer-banner {
                 flex-direction: column;
                 text-align: center;
@@ -2608,10 +2624,10 @@
     <div class="background">
 
         <header class="navbar">
-            <div class="logo gsap-fade-in">
+            <a href="index.html" class="logo gsap-fade-in">
                 <img src="assets/logo.png" alt="RoghanCare Logo">
                 <span>RoghanCare</span>
-            </div>
+            </a>
 
             <div class="menu-toggle" id="mobile-menu">
                 <i data-feather="menu"></i>
@@ -2625,12 +2641,12 @@
                 <a href="index.html#contact-us">Contact</a>
             </div>
 
-            <a href="index.html#contact-us" class="nav-btn desktop-only gsap-fade-in">Book Demo →</a>
+            <a href="book-demo.html" class="nav-btn desktop-only gsap-fade-in">Book Demo →</a>
         </header>
 
         <section class="features-hero">
             <div class="features-hero-left">
-                <div class="badge gsap-slide-up"><i data-feather="star" class="badge-icon"></i> AMAZING FEATURES</div>
+                <div class="badge gsap-slide-up"><i data-feather="star" class="badge-icon"></i> Amazing Features</div>
                 <h1 class="gsap-slide-up">Instant Alerts.<br><span>Critical Responses.</span></h1>
                 <p class="gsap-slide-up">Designed for high-trust healthcare environments. We combine architectural
                     precision with medical safety to ensure every alert reaches the right responder every time.</p>
@@ -2669,7 +2685,7 @@
     <section class="section-get-started">
         <div class="container">
             <div class="gs-header gsap-slide-up">
-                <div class="badge"><i data-feather="zap"></i> GET STARTED</div>
+                <div class="badge"><i data-feather="zap" class="badge-icon"></i> Get Started</div>
                 <h2>Go Live in 4 Simple Steps</h2>
             </div>
             <div class="gs-steps-wrapper gsap-stagger-up">
@@ -3300,7 +3316,7 @@
         // 4. Role Tabs Interaction Logic
         const roleData = {
             "doctors": { title: "Doctors Stay Informed & In Control", img: "assets/feature-s3.png", list: ["Receive critical alerts instantly", "View patient & incident details", "Communicate with the right team", "Take action from anywhere"] },
-            "nurses": { title: "Nurses Deliver Rapid Patient Care", img: "assets/feature-s3.png", list: ["Get instant Code Blue notifications", "Coordinate with attending physicians", "Log patient vitals and status directly", "Minimize response delays effectively"] },
+            "nurses": { title: "Nurses Deliver Rapid Patient Care", img: "assets/feature-s3.png", list: ["Get instant Code notifications", "Coordinate with attending physicians", "Instantly Respond to patients", "Minimize response delays effectively"] },
             "administrators": { title: "Administrators Oversee Operations", img: "assets/feature-s3.png", list: ["Monitor hospital-wide alert metrics", "Generate compliance and audit reports", "Manage user roles and permissions", "Analyze response times and bottlenecks"] },
             "security": { title: "Security Staff Ensure Campus Safety", img: "assets/feature-s3.png", list: ["Receive immediate threat alerts", "Coordinate emergency evacuations", "Track incident resolution in real-time", "Communicate with emergency responders"] },
             "emergency": { title: "Emergency Teams Act with Precision", img: "assets/feature-s3.png", list: ["Get multi-channel dispatch alerts", "Access critical situational context", "Coordinate on-the-go via mobile app", "Auto-escalate unacknowledged alerts"] }
@@ -3385,4 +3401,4 @@
     </script>
 </body>
 
-    </html>
+</html>

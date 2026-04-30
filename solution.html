@@ -249,11 +249,23 @@
             border-radius: 12px;
             font-weight: 500;
             transition: 0.3s;
+            border: 2px solid var(--primary);
         }
 
         .nav-btn:hover {
             background: var(--primary-dark);
+            border-color: var(--primary-dark);
             transform: scale(1.05);
+        }
+
+        .nav-btn.active {
+            background: #ffffff;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .nav-btn.active:hover {
+            background: var(--primary-fade);
         }
 
         .menu-toggle {
@@ -300,7 +312,7 @@
             padding: 8px 14px;
             border-radius: 999px;
             font-size: 13px;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             font-weight: 600;
         }
 
@@ -1215,6 +1227,10 @@
             padding: 40px 0;
         }
 
+        .footer-banner-wrapper {
+            padding: 60px 0 40px 0;
+        }
+
         .footer-banner {
             background: linear-gradient(90deg, #3B82F6 0%, #3b82f6 100%);
             border-radius: 32px;
@@ -1225,8 +1241,6 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
-            max-width: 1400px;
-            margin: 0 auto;
         }
 
         .banner-content {
@@ -1351,6 +1365,7 @@
         .social-links {
             display: flex;
             gap: 12px;
+            margin-bottom: 20px;
         }
 
         .social-btn {
@@ -1797,6 +1812,28 @@
             }
         }
 
+        @media (max-width: 1100px) {
+            .footer-banner {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+                padding: 50px 30px;
+            }
+
+            .banner-content {
+                max-width: 100%;
+            }
+
+            .banner-graphic {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+            }
+        }
+
         @media (max-width: 768px) {
 
             /* General Text */
@@ -1950,10 +1987,10 @@
     <div class="background">
 
         <header class="navbar">
-            <div class="logo gsap-fade-in">
+            <a href="index.html" class="logo gsap-fade-in">
                 <img src="assets/logo.png" alt="RoghanCare Logo">
                 <span>RoghanCare</span>
-            </div>
+            </a>
 
             <div class="menu-toggle" id="mobile-menu">
                 <i data-feather="menu"></i>
@@ -1961,13 +1998,13 @@
 
             <div class="nav-links gsap-fade-in" id="nav-links">
                 <a href="index.html">Home</a>
-                <a href="solutions.html" class="active">Solutions</a>
+                <a href="solution.html" class="active">Solutions</a>
                 <a href="feature.html">Features</a>
                 <a href="faq.html">FAQs</a>
                 <a href="index.html#contact-us">Contact</a>
             </div>
 
-            <a href="index.html#contact-us" class="nav-btn desktop-only gsap-fade-in">Book Demo →</a>
+            <a href="book-demo.html" class="nav-btn desktop-only gsap-fade-in">Book Demo →</a>
         </header>
 
         <section class="solutions-hero">
@@ -1975,7 +2012,7 @@
             <div class="solutions-hero-left">
 
                 <div class="badge gsap-slide-up">
-                    <i data-feather="codesandbox" class="badge-icon"></i> Solution & use cases
+                    <i data-feather="codesandbox" class="badge-icon"></i> Solution & Use Cases
                 </div>
 
                 <h1 class="gsap-slide-up">
@@ -2509,18 +2546,18 @@
                 <div class="footer-col">
                     <h4>Product</h4>
                     <ul>
-                        <li><a href="/solutions">Feature</a></li>
-                        <li><a href="/solutions">Solutions</a></li>
-                        <li><a href="/solutions">Integration</a></li>
+                        <li><a href="feature.html">Features</a></li>
+                        <li><a href="solution.html">Solutions</a></li>
+                        <li><a href="solution.html#industries">Use Cases</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h4>Quick Links</h4>
                     <ul>
-                        <li><a href="/about-us">About us</a></li>
-                        <li><a href="/frequently-asked-questions">FAQ's</a></li>
-                        <li><a href="/solutions">Benefits</a></li>
+                        <li><a href="index.html#about-us">About us</a></li>
+                        <li><a href="index.html#frequently-asked-questions">FAQ's</a></li>
+                        <li><a href="feature.html#explore-features">Benefits</a></li>
                     </ul>
                 </div>
 
